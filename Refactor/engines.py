@@ -1,4 +1,4 @@
-from Refactor.serv_interface import Serviceable
+from serv_interface import Serviceable
 from abc import ABC, abstractmethod
 
 class Engine(Serviceable, ABC):

@@ -2,7 +2,7 @@ from datetime import datetime
 
 from abc import ABC, abstractmethod
 
-from Refactor.serv_interface import Serviceable
+from serv_interface import Serviceable
 from engines import Willoughby_E, Sternman_E, Capulet_E
 from batteries import Spindler_B, Nubbin_B
 """
@@ -32,7 +32,7 @@ class Car(ABC):
 """make a service check method for each engine and put in the ints. Then make a battery service check thing and put in all the data there."""
 
 
-class CarFactory()
+class CarFactory():
     def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage):
         car_engine = Capulet_E(last_service_mileage, current_mileage)
         car_battery = Spindler_B(last_service_date, current_date)
@@ -66,9 +66,9 @@ class CarFactory()
 
 
 class Car(Serviceable):
-    def __init__(self, engine, battery, last_serv_date):
+    def __init__(self, engine, batter, last_serv_date):
         Car_Engine = engine 
-        Car_Batt = battery
+        Car_Batt = batter
         last_service_date = last_serv_date
     def needs_service(self):
         if Car.Car_Batt.needs_service() == True or Car.Car_Engine.needs_service() == True:
