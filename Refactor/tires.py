@@ -2,7 +2,7 @@ from Refactor.serv_interface import Serviceable
 from abc import ABC, abstractmethod
 
 
-class Tire(Serviceable):
+class Tire(ABC):
     @abstractmethod
     def needs_service(self):
         pass
