@@ -33,32 +33,32 @@ class Car(ABC):
 
 
 class CarFactory():
-    def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage, tire_array):
+    def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage,tire_array):
         car_engine = Capulet_E(last_service_mileage, current_mileage)
         car_battery = Spindler_B(last_service_date, current_date)
         newCar = Car(car_battery, car_engine)
         return newCar
 
-    def create_glissade(current_date, last_service_date, current_mileage, last_service_mileage):
+    def create_glissade(current_date, last_service_date, current_mileage, last_service_mileage, tire_array):
         car_engine = Willoughby_E(last_service_mileage, current_mileage)
         car_battery = Spindler_B(last_service_date, current_date)
         newCar = Car(car_battery, car_engine)
         return newCar
 
-    def create_palindrome(current_date, last_service_date, warning_light_on):
+    def create_palindrome(current_date, last_service_date, warning_light_on, tire_array):
         newCar = Car(current_date, last_service_date, warning_light_on)
         car_engine = Sternman_E(warning_light_on)
         car_battery = Spindler_B(last_service_date, current_date)
         newCar = Car(car_battery, car_engine)
         return newCar
 
-    def create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage):
+    def create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage, tire_array):
         car_engine = Willoughby_E(last_service_mileage, current_mileage)
         car_battery = Nubbin_B(last_service_date, current_date)
         newCar = Car(car_battery, car_engine)
         return newCar
       
-    def create_thovex(current_date, last_service_date, current_mileage, last_service_mileage):
+    def create_thovex(current_date, last_service_date, current_mileage, last_service_mileage, tire_array):
         car_engine = Capulet_E(last_service_mileage, current_mileage)
         car_battery = Nubbin_B(last_service_date, current_date)
         newCar = Car(car_battery, car_engine)
@@ -66,7 +66,7 @@ class CarFactory():
 
 
 class Car(Serviceable):
-    def __init__(self, engine, batter, last_serv_date):
+    def __init__(self, engine, batter, last_serv_date, tires):
         Car_Engine = engine 
         Car_Batt = batter
         last_service_date = last_serv_date

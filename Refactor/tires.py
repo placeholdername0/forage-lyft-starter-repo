@@ -17,7 +17,7 @@ class Carrigan(Tire):
             else:
                 return False
 
-class Carrigan(Tire):
+class Octoprime(Tire):
     def __init__(self, num_array):
         tires_quality = num_array
     def needs_service(self):
