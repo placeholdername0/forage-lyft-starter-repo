@@ -1,8 +1,7 @@
 import unittest
-from Refactor.batteries import Spindler_B, Nubbin_B
-from Refactor.engines import Willoughby_E, Sternman_E, Capulet_E
+from refactor.batteries import Spindler_B, Nubbin_B
+from refactor.engines import Willoughby_E, Sternman_E, Capulet_E
 from datetime import datetime
-
 
 
 class TestCapulet_E(unittest.TestCase):

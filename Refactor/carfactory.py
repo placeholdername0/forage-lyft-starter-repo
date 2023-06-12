@@ -33,7 +33,7 @@ class Car(ABC):
 
 
 class CarFactory():
-    def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage):
+    def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage, tire_array):
         car_engine = Capulet_E(last_service_mileage, current_mileage)
         car_battery = Spindler_B(last_service_date, current_date)
         newCar = Car(car_battery, car_engine)
